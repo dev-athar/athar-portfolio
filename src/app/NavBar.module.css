@@ -1,0 +1,117 @@
+/* styles/App.module.css */
+
+/* Navigation Bar */
+/* Style the navigation bar */
+.navbar {
+  max-width: 50rem;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 30px; /* Adjust padding as needed */
+  color: #fff; /* Set your desired text color */
+  border-radius: 0px 0px 30px 30px; /* Add rounded corners */
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1); /* Add a subtle drop shadow */
+}
+
+.navbar a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 15px;
+  font-size: 16px;
+}
+
+.navbar a:hover {
+  text-decoration: underline;
+}
+
+.hamburgerMenu {
+  cursor: pointer;
+}
+
+.hamburgerIcon {
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.line {
+  height: 0.2rem;
+  width: 1.9rem;
+  border-radius: 0.2rem;
+  background-color: #ffffff;
+  margin: 0.2rem 0;
+  transition: 0.4s;
+}
+
+.hamburgerIcon.open .line:nth-child(1) {
+  transform: rotate(-45deg) translate(-0.4rem, 0.5rem);
+}
+
+.hamburgerIcon.open .line:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburgerIcon.open .line:nth-child(3) {
+  transform: rotate(45deg) translate(-0.3rem, -0.4rem);
+}
+
+/* Style the website logo in the middle */
+.website-logo {
+  max-width: 100px; /* Adjust the max-width as needed */
+}
+
+.website-logo img {
+  height: 100px;
+  content: fill;
+  align-items: center;
+}
+
+/* Style the right side of the navbar */
+.navbar-right {
+  display: flex;
+  align-items: center;
+}
+
+/* Style the search and cart logos */
+.search-logo,
+.cart-logo {
+  height: 2rem;
+  margin-left: 1rem; /* Adjust the spacing between icons as needed */
+  cursor: pointer;
+}
+
+/* Collapsible menu */
+.collapsibleMenu {
+  display: none; /* Initially hide the menu */
+  position: absolute;
+  top: 100px;
+  left: 0; /* Expand from the left edge */
+  right: auto; /* No limit on the right side */
+  background-color: #fff;
+  border: 1px solid #ccc;
+  padding: 10px;
+  z-index: 1;
+}
+
+.collapsibleMenu a {
+  text-decoration: none;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .hamburgerMenu {
+    display: block;
+  }
+
+  .rightButtons {
+    display: none;
+  }
+
+  .collapsibleMenu {
+    display: flex;
+    flex-direction: row;
+  }
+}

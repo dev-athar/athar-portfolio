@@ -3,9 +3,8 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  --primary-color: #00f7ff;
+  --secondary-color: #008f94;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -30,4 +29,72 @@ body {
   .text-balance {
     text-wrap: balance;
   }
+}
+
+.home-background {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background-size: cover;
+  background-position: center;
+  opacity: 0.8; /* Adjust the opacity as needed */
+  z-index: -1; /* Make sure the background is behind other content */
+}
+
+.bg-image-1 {
+  position: relative;
+  scale: 0.7;
+  translate: 100px 20px;
+}
+.bg-image-2 {
+  scale: 0.5;
+  translate: -100px -50px;
+}
+
+a {
+  text-decoration: none; /* Remove underline */
+  color: inherit; /* Inherit text color */
+  display: inline-block; /* Display as inline-block */
+}
+
+.skill-level-bar {
+  /* @apply bg-black border-2 h-3 rounded-full relative; */
+  @apply bg-secondary-color h-1 rounded-full relative;
+}
+
+/* Glass Effect */
+.glass {
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.1),
+    rgba(255, 255, 255, 0)
+  );
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+}
+
+.body {
+  min-height: calc(
+    100vh - 80px
+  ); /* Adjust 60px according to your footer height */
+  padding-bottom: 60px; /* Same height as footer */
+}
+.body-projects {
+  min-height: calc(
+    100vh - 135px
+  ); /* Adjust 60px according to your footer height */
+  padding-bottom: 60px; /* Same height as footer */
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 60px; /* Adjust height as needed */
+  background-color: #f0f0f0; /* Example background color */
 }
